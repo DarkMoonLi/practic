@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "kIE0mAyRgdY5GIO7LMfRHXqnG9wM4WmmmhAN1Eo7gvgD3e8wnwRdOn605K+fEgEuXmDN8UNPjoOTq6f1hExtdQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Acer\\Desktop\\practic\\Lab2\\UniversityModel\\UniversityModel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

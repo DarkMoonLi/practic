@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversityModel", "UniversityModel.csproj", "{74FB7D06-EC2C-4F09-8402-34B77F34C668}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversityModelLib", "..\UniversityModelLib\UniversityModelLib.csproj", "{A1776329-3C53-456C-8D20-6FBC5C4618B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74FB7D06-EC2C-4F09-8402-34B77F34C668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74FB7D06-EC2C-4F09-8402-34B77F34C668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74FB7D06-EC2C-4F09-8402-34B77F34C668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74FB7D06-EC2C-4F09-8402-34B77F34C668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1776329-3C53-456C-8D20-6FBC5C4618B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1776329-3C53-456C-8D20-6FBC5C4618B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1776329-3C53-456C-8D20-6FBC5C4618B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1776329-3C53-456C-8D20-6FBC5C4618B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB001536-4A1B-495C-A521-9A7700C58B87}
+	EndGlobalSection
+EndGlobal
