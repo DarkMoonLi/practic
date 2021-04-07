@@ -30,7 +30,7 @@ namespace UniversityModelLib
 
         public string AddNewStudent()
         {
-            PrintStudentsInfo person = new PrintStudentsInfo();
+            PrintStudentInfo person = new PrintStudentInfo();
 
             Console.Write("Введите имя: ");
             person.Name = Console.ReadLine();
