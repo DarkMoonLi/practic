@@ -2,7 +2,7 @@
 
 namespace UniversityModelLib
 {
-    public class PrintStudentsInfo : IStudent
+    public class PrintStudentInfo : IStudent
     {
         public string Name;
         public string LastName;
