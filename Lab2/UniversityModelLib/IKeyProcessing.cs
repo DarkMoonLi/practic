@@ -8,6 +8,6 @@ namespace UniversityModelLib
 {
     interface IKeyProcessing
     {
-        public string PressKey( string answer, KeyProcessing keyDown, OperationList newStudent, List<string> listStudent );
+        public string PressKey( string answer, KeyProcessing key_down, OperationList newStudent, List<string> listStudent );
     }
 }
