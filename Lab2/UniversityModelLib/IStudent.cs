@@ -8,10 +8,10 @@ namespace UniversityModelLib
 {
     public interface IStudent
     {
-        public string SetName { get; set; }
-        public string SetMiddleName { get; set; }
-        public string SetLastName { get; set; }
-        public int SetAge { get; set; }
-        string GetInfoStudent { get; set; }
+        public string Name { get; set; }
+        public string MiddleName { get; set; }
+        public string LastName { get; set; }
+        public int Age { get; set; }
+        public string Data { get; set; }
     }
 }

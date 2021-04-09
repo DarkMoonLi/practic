@@ -30,23 +30,23 @@ namespace UniversityModelLib
 
         public string AddNewStudent()
         {
-            PrintStudentInfo person = new PrintStudentInfo();
+            StudentInfo person = new StudentInfo();
 
             Console.Write("Введите имя: ");
             person.Name = Console.ReadLine();
-            string Name = person.SetName;
+            string Name = person.Name;
 
             Console.Write("Введите фамилию: ");
             person.LastName = Console.ReadLine();
-            string LastName = person.SetLastName;
+            string LastName = person.LastName;
 
             Console.Write("Введите отчество: ");
             person.MiddleName = Console.ReadLine();
-            string MiddleName = person.SetMiddleName;
+            string MiddleName = person.MiddleName;
 
             Console.Write("Введите возраст: ");
             person.Age = Convert.ToInt32(Console.ReadLine());
-            int Age = person.SetAge;
+            int Age = person.Age;
 
             Console.Write("Данные студента: ");
             string NewStudent = $"{LastName} {Name} {MiddleName} {Age}";
