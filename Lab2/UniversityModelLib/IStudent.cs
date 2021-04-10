@@ -12,7 +12,6 @@ namespace UniversityModelLib
         public string MiddleName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
-        /*public string GetInfoStudent { get; set; }*/
         public string Data { get; set; }
     }
 }
