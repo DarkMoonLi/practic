@@ -10,17 +10,17 @@ namespace UniversityModel
         {
             var ListStudent = new List<string>();
             OperationList NewStudent = new OperationList();
-            KeyProcessing key_down = new KeyProcessing();
+            KeyProcessing KeyDown = new KeyProcessing();
 
             Console.WriteLine("Для ввода нового студента нажмите Enter, для выхода-Escape");
             Console.WriteLine("F1-показать список, F2-очистить список");
-            key_down.answer = "work";
-            while (key_down.answer == "work")
+            KeyDown.answer = "work";
+            while (KeyDown.answer == "work")
             {
                 string Data = NewStudent.AddNewStudent();
                 Console.WriteLine(Data);
                 NewStudent.AddToList(Data, ListStudent);
-                key_down.PressKey( key_down.answer, key_down, NewStudent, ListStudent );
+                KeyDown.PressKey( KeyDown.answer, KeyDown, NewStudent, ListStudent );
             }
         }
     }
