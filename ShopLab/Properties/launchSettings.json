@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ShopLab": {
+      "commandName": "Project",
+      "commandLineArgs": "insert delete update",
+      "sqlDebugging": false
+    }
+  }
+}
