@@ -8,7 +8,7 @@ namespace UniversityModelLib
 {
     public class KeyProcessing : IKeyProcessing
     {
-        public string answer;
+        public string Answer;
         ConsoleKeyInfo key;
         public string PressKey(string answer, KeyProcessing keyDown, OperationList newStudent, List<string> listStudent)
         {
@@ -19,32 +19,32 @@ namespace UniversityModelLib
             {
                 case ConsoleKey.Escape:
                     {
-                        keyDown.answer = "don't work";
-                        return keyDown.answer;
+                        keyDown.Answer = "don't work";
+                        return keyDown.Answer;
                     };
 
                 case ConsoleKey.Enter:
                     {
-                        keyDown.answer = "work";
-                        return keyDown.answer;
+                        keyDown.Answer = "work";
+                        return keyDown.Answer;
                     };
 
                 case ConsoleKey.F1:
                     {
                         newStudent.WriteList(listStudent);
                         keyDown.PressKey(answer, keyDown, newStudent, listStudent);
-                        return keyDown.answer;
+                        return keyDown.Answer;
                     };
 
                 case ConsoleKey.F2:
                     {
                         newStudent.DeleteList(listStudent);
                         keyDown.PressKey(answer, keyDown, newStudent, listStudent);
-                        return keyDown.answer;
+                        return keyDown.Answer;
                     };
             }
-            keyDown.answer = "don't work";
-            return keyDown.answer;
+            keyDown.Answer = "don't work";
+            return keyDown.Answer;
         }
     }
 }

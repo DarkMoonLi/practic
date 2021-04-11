@@ -8,19 +8,19 @@ namespace UniversityModel
     {
         static void Main(string[] args)
         {
-            var ListStudent = new List<string>();
-            OperationList NewStudent = new OperationList();
-            KeyProcessing KeyDown = new KeyProcessing();
+            var listStudent = new List<string>();
+            OperationList newStudent = new OperationList();
+            KeyProcessing keyDown = new KeyProcessing();
 
             Console.WriteLine("Для ввода нового студента нажмите Enter, для выхода-Escape");
             Console.WriteLine("F1-показать список, F2-очистить список");
-            KeyDown.answer = "work";
-            while (KeyDown.answer == "work")
+            keyDown.Answer = "work";
+            while (keyDown.Answer == "work")
             {
-                string Data = NewStudent.AddNewStudent();
+                string Data = newStudent.AddNewStudent();
                 Console.WriteLine(Data);
-                NewStudent.AddToList(Data, ListStudent);
-                KeyDown.PressKey( KeyDown.answer, KeyDown, NewStudent, ListStudent );
+                newStudent.AddToList(Data, listStudent);
+                keyDown.PressKey( keyDown.Answer, keyDown, newStudent, listStudent );
             }
         }
     }
