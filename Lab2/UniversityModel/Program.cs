@@ -20,7 +20,7 @@ namespace UniversityModel
                 string Data = NewStudent.AddNewStudent();
                 Console.WriteLine(Data);
                 NewStudent.AddToList(Data, ListStudent);
-                KeyDown.PressKey( KeyDown.answer, KeyDown, NewStudent, ListStudent );
+                KeyDown.PressKey( KeyDown.answer, KeyDown, NewStudent, ListStudent );   //обработка нажатия клавиш
             }
         }
     }
