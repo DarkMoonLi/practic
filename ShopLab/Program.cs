@@ -31,6 +31,14 @@ namespace ShopLab
             {
                 UpdateOrder(1, "UPDATED ProductName");
             }
+            else if (command == "output")
+            {
+                List<Statistics> statistics = OutputStatistics();
+                foreach (Statistics statisticCustomer in statistics)
+                {
+                    Console.WriteLine( $"{statisticCustomer.Name} {statisticCustomer.CountOrder} {statisticCustomer.SumPrice}" );
+                }
+            }
         }
 
         private static List<Order> ReadOrder()
@@ -48,7 +56,7 @@ namespace ShopLab
                             [ProductName],
                             [Price],
                             [CustomerId]
-                        FROM Order";
+                        FROM [Order]";
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
@@ -107,7 +115,7 @@ namespace ShopLab
                     command.CommandText = @"
                         UPDATE [Order]
                         SET [ProductName] = @ProductName
-                        WHERE OrderId = @OrderId";
+                        WHERE [OrderId] = @OrderId";
 
                     command.Parameters.Add("@OrderId", SqlDbType.BigInt).Value = orderId;
                     command.Parameters.Add("@ProductName", SqlDbType.NVarChar).Value = productName;
@@ -115,6 +123,41 @@ namespace ShopLab
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        private static List<Statistics> OutputStatistics()
+        {
+            List<Statistics> statistics = new List<Statistics>();
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    using (SqlCommand command = connection.CreateCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = @"
+                        SELECT [Customer].[Name], COUNT([Order].[OrderId]) as CountOrder, Sum([Order].[Price]) as SumPrice
+                        FROM [Customer]
+                        LEFT JOIN [Order]
+                        ON ([Customer].[CustomerId] = [Order].[CustomerId])
+                        GROUP BY [Customer].[CustomerId], [Customer].[Name]";
+
+                        using SqlDataReader reader = command.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            var statisticCustomer = new Statistics
+                            {
+                                Name = Convert.ToString(reader["Name"]),
+                                CountOrder = Convert.ToInt32(reader["CountOrder"]),
+                                SumPrice = Convert.ToInt32(reader["SumPrice"])
+                            };                                                      //проблемы с выводом данных
+                            statistics.Add(statisticCustomer);
+                        }
+                    }
+                }
+            }
+            return statistics;
         }
     }
 }
