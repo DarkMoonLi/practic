@@ -152,7 +152,7 @@ namespace ShopLab
                                 Name = Convert.ToString(reader["Name"]),
                                 CountOrder = Convert.ToInt32(reader["CountOrder"]),
                                 SumPrice = Convert.ToInt32(reader["SumPrice"])
-                            };                                                      //проблемы с выводом данных
+                            };                                                     
                             statistics.Add(statisticCustomer);
                         }
                     }
