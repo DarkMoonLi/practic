@@ -2,7 +2,7 @@
   "profiles": {
     "ShopLab": {
       "commandName": "Project",
-      "commandLineArgs": "output",
+      "commandLineArgs": "update",
       "sqlDebugging": false
     }
   }

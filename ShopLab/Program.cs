@@ -33,7 +33,7 @@ namespace ShopLab
             }
             else if (command == "output")
             {
-                List<Statistics> statistics = OutputStatistics();
+                List<Statistics> statistics = GetStatistics();
                 foreach (Statistics statisticCustomer in statistics)
                 {
                     Console.WriteLine( $"{statisticCustomer.Name} {statisticCustomer.CountOrder} {statisticCustomer.SumPrice}" );
@@ -110,6 +110,7 @@ namespace ShopLab
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
+                connection.Open();
                 using (SqlCommand command = connection.CreateCommand())
                 {
                     command.CommandText = @"
@@ -125,7 +126,7 @@ namespace ShopLab
             }
         }
 
-        private static List<Statistics> OutputStatistics()
+        private static List<Statistics> GetStatistics()
         {
             List<Statistics> statistics = new List<Statistics>();
             using (SqlConnection connection = new SqlConnection(_connectionString))
